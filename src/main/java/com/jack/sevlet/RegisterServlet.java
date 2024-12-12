@@ -29,12 +29,12 @@ public class RegisterServlet extends HttpServlet {
         HttpSession httpSession= req.getSession();
 
        if(b){
-           httpSession.setAttribute("msg","registered");
+           httpSession.setAttribute("msg","registered!");
            System.out.println("successfully registered");
 
        }
        else{
-           httpSession.setAttribute("msg","not registered");
+           httpSession.setAttribute("msg","not registered!");
            System.out.println("something wrong on server!");
        }
        resp.sendRedirect("index.jsp");

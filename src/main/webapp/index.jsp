@@ -14,6 +14,18 @@
                 <div class="car-header text-center fs-3">
                     Student Registration
                 </div>
+                                <%
+                                HttpSession httpSession = request.getSession();
+                	            String msg=(String) httpSession.getAttribute("msg");
+                                if(msg != null){
+                                %>
+                                <p class ="text-center fs-4 text-success"><%=msg%></p>
+
+
+                                <%
+                                }
+                                httpSession.removeAttribute("msg");
+                                %>
 
 
                 <div class ="card-body">
